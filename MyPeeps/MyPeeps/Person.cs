@@ -35,7 +35,10 @@ namespace MyPeeps
             string lastName = Validator.CheckName("Enter person's last name: ",
                 "\nPlease enter a valid last name (all letters, first letter capitalized): ");
             int age = Validator.CheckNum("Enter person's age: ", "\nPlease enter a positive whole number " +
-                "(that is reasonable for a person's age): ", 122, 1);            
+                "(one that is reasonable for an adult person's age). \n" +
+                "Please keep in mind the person must be an adult to be added to the list. " +
+                "", 122, 18);
+            //122 is the age of the oldest person ever
             string email = Validator.CheckEmail("Enter person's email address: ");
             return new Person(firstName, lastName, age, email);
         }
